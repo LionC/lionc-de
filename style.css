@@ -23,10 +23,8 @@ header.nav a {
   text-align: center;
   text-transform: uppercase;
 
-  border-style: solid;
-  border-radius: 18px;
-  border-color: black;
-  border-width: medium;
+  border-bottom: 10px solid black;
+  border-width: 2px;
 }
 
 header.nav a:hover {
