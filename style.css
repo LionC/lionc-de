@@ -1,0 +1,61 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+header.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+header.nav a {
+  transition: border-color linear 0.2s;
+
+  display: block;
+  text-decoration: none;
+
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  border-style: solid;
+  border-radius: 18px;
+  border-color: black;
+  border-width: medium;
+}
+
+header.nav a:hover {
+  border-color: white;
+}
+
+header.nav a.choosen {
+  border-color: white;
+}
+
+div.temporarystaticfill {
+  margin-top: 150px;
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+}
+
+div.vspacer {
+  height: 50px;
+}
+
+.giant-caption {
+  font-size: 4em;
+}
+
+a {
+  color: inherit;
+}
