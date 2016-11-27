@@ -1,59 +1,267 @@
+/*
+* Resets
+*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
   background-color: black;
   color: white;
   font-family: 'Josefin Sans', sans-serif;
 }
 
-header.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  padding-top: 5px;
-  padding-bottom: 5px;
+* {
+    box-sizing: border-box;
 }
 
-header.nav a {
-  transition: border-color linear 0.2s;
-
-  display: block;
-  text-decoration: none;
-
-  padding: 20px;
-  text-align: center;
-  text-transform: uppercase;
-
-  border-bottom: 10px solid black;
-  border-width: 2px;
+a, a:hover, a:active {
+    text-decoration: underline;
+    color: inherit;
 }
 
-header.nav a:hover {
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/*
+* Typography
+*/
+
+html, body, svg {
+    line-height: 1.43;
+    font-size: 19px;
+    font-weight: 300;
+}
+
+@media only screen and (min-width : 970px) {
+    html, body {
+        font-size: 17px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    font-weight: 500;
+}
+
+h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.15em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: .85em;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/*
+* Images
+*/
+
+img {
+    vertical-align: middle;
+}
+
+img.circle {
+    border-radius: 50%;
+}
+
+/*
+* Header
+*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: -1;
+}
+
+header {
+    font-size: 1.4em;
+}
+
+header, header > h1 {
+    line-height: .8em;
+    font-weight: 100;
+    color: white;
+}
+
+@media only screen and (min-width : 970px) {
+    header {
+        font-size: 36px;
+    }
+}
+
+/*
+* Footer
+*/
+
+footer {
+    min-height: 55px;
+}
+
+/*
+* Content
+*/
+
+main {
+    margin-top: 100vh;
+}
+
+main section {
+    background-color: black;
+    border-top: 1px solid white;
+    overflow: hidden;
+
+    padding: 30px 15px;
+
+    position: relative;
+    min-height: 175vh;
+}
+
+main section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: inherit;
+}
+
+@media only screen and (min-width : 970px) {
+    main section {
+        flex-direction: row;
+
+        padding-right: calc(50% - 485px);
+        padding-left: calc(50% - 485px);
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+main section:nth-of-type(1) {
+    z-index: 1;
+}
+
+main section:nth-of-type(2) {
+    z-index: 2;
+}
+
+main section:nth-of-type(3) {
+    z-index: 3;
+}
+
+main section:nth-of-type(4) {
+    z-index: 4;
+}
+
+section.blog-preview {
+    flex-direction: column;
+}
+
+section.blog-preview h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+section.blog-preview img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+section.blog-preview > a, section.blog-preview > a:hover, section.blog-preview > a:active {
+    text-decoration: none;
+}
+
+@media only screen and (min-width : 970px) {
+    section.blog-preview div {
+        max-width: 550px;
+    }
+}
+
+section.blog-post {
+    display: block;
+
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+@media only screen and (min-width : 970px) {
+    section.blog-post {
+        padding-right: calc(50% - 320px);
+        padding-left: calc(50% - 320px);
+    }
+}
+
+section.blog-post img {
+    width: 100%;
+}
+
+section.blog-post figure {
+    margin: 40px 0px;
+}
+
+section.blog-post figure figcaption {
+    color: #858483;
+    font-size: .8em;
+}
+
+section.blog-post figure figcaption > :first-child {
+    margin-top:5px;
+}
+
+.blog-lead {
+    font-size: 1.15em;
+    font-weight: 400;
+}
+
+
+header.nav a:hover, header.nav a.choosen {
   border-color: white;
-}
-
-header.nav a.choosen {
-  border-color: white;
-}
-
-div.temporarystaticfill {
-  margin-top: 150px;
-  width: 100%;
-  text-align: center;
-
-  display: flex;
-  flex-direction:column;
-  justify-content:center;
-  align-content:center;
-}
-
-div.vspacer {
-  height: 50px;
-}
-
-.giant-caption {
-  font-size: 4em;
-}
-
-a {
-  color: inherit;
 }
