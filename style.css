@@ -114,22 +114,23 @@ header {
     align-items: center;
 
     z-index: -1;
-    font-size: 1.4em;
 
     padding: 0 13px 0 13px;
 }
 
-header {
-}
-
 header > h1 {
+    font-size: 3em;
     line-height: .8em;
     font-weight: 100;
 }
 
 @media only screen and (min-width : 970px) {
     header {
-        font-size: 36px;
+        font-size: 22px;
+    }
+
+    header > h1 {
+        font-size: 5em;
     }
 }
 
@@ -155,7 +156,7 @@ main section {
     overflow: hidden;
 
     position: relative;
-    min-height: 175vh;
+    min-height: 150vh;
 }
 
 main section > div {
