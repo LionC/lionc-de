@@ -4,6 +4,7 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -140,14 +141,45 @@ section.intro h1 {
     font-weight: 100;
 }
 
+section.intro h1 small {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+section.intro img {
+    display: none;
+}
+
 @media only screen and (min-width : 970px) {
     section.intro {
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 30px 30px 30px 50px;
+
         font-size: 22px;
-        flex-direction: column;
     }
 
     section.intro h1 {
-        font-size: 5em;
+        font-size: 4.5em;
+    }
+
+    section.intro h1 small {
+        font-size: 1.3rem;
+    }
+
+    section.intro img {
+        display: block;
+
+        flex: 1;
+
+        min-width: 0;
+        max-height: calc(100vh - 60px);
+
+        margin-left: 8%;
+
+        object-fit: contain;
     }
 }
 
