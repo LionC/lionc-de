@@ -2,6 +2,7 @@
     "healthchecks": {
         "web": [
             {
+                "type": "readiness",
                 "content": "Leon Strauss"
             }
         ]
