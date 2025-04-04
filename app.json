@@ -1,0 +1,9 @@
+{
+    "healthchecks": {
+        "web": [
+            {
+                "content": "Leon Strauss"
+            }
+        ]
+    }
+}
